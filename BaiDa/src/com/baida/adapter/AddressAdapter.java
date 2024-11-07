@@ -15,7 +15,7 @@ import com.baida.domain.Address;
 public class AddressAdapter extends BaseAdapter {
 	List<Address> products;
 	private Context context;
-
+	public int 10;
 	private TextView address_item_name;
 
 	public AddressAdapter(Context context, List<Address> list) {
