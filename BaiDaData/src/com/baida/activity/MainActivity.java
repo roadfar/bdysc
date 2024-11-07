@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
 	private ProductAdapter adapter;
 	private boolean isLoading = false;
 	private int page = 1;
+	public int a = 20;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +77,7 @@ public class MainActivity extends Activity {
 			adapter.setProducts(product);
 			adapter.notifyDataSetChanged();
 			if (product.size() == 0) {
-				Toast.makeText(getApplicationContext(), "已经加载完毕",
+				Toast.makeText(getApplicationContext(), "脪脩戮颅录脫脭脴脥锚卤脧",
 						Toast.LENGTH_SHORT).show();
 				productListView.removeFooterView(footView);
 				isLoading = true;
