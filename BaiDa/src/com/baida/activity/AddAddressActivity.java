@@ -32,6 +32,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 	String phoneNum;
 	String jiedao;
 	private String flag;
+	public int 10;
 
 	private Spinner province_spinner;
 	private Spinner city_spinner;
@@ -283,7 +284,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 				address = display.getText().toString();
 				if (address.equals("") || name.equals("")
 						|| phoneNum.equals("")) {
-					Toast.makeText(getApplicationContext(), "È·¶¨ÕâÑùÌîĞ´Âğ£¿Ç×~~!",
+					Toast.makeText(getApplicationContext(), "ç¡®å®šè¿™æ ·å¡«å†™å—ï¼Ÿäº²~~!",
 							Toast.LENGTH_SHORT).show();
 				} else {
 					address2.setAddress(address);
@@ -294,7 +295,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 					new AddressManage().addaddress(address2,
 							getApplicationContext());
 					Toast.makeText(getApplicationContext(),
-							"±£´æĞÅÏ¢³É¹¦£¬Ğ¡»ï°é¿ìÈ¥¿´¿´¹ºÎï°É", Toast.LENGTH_SHORT).show();
+							"ä¿å­˜ä¿¡æ¯æˆåŠŸï¼Œå°ä¼™ä¼´å¿«å»çœ‹çœ‹è´­ç‰©å§", Toast.LENGTH_SHORT).show();
 					finish();
 				}
 				//
@@ -336,7 +337,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 	private void loadSpinner() {
 		display = (EditText) findViewById(R.id.display_edit);
 		province_spinner = (Spinner) findViewById(R.id.province_spinner);
-		province_spinner.setPrompt("ÇëÑ¡ÔñÊ¡·İ");
+		province_spinner.setPrompt("è¯·é€‰æ‹©çœä»½");
 		province_adapter = ArrayAdapter.createFromResource(this,
 				R.array.province_item, android.R.layout.simple_spinner_item);
 		province_adapter
@@ -358,7 +359,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 											.toString() + provinceId.toString());
 							county_spinner = (Spinner) findViewById(R.id.county_spinner);
 							city_spinner = (Spinner) findViewById(R.id.city_spinner);
-							city_spinner.setPrompt("ÇëÑ¡Ôñ³ÇÊĞ");
+							city_spinner.setPrompt("è¯·é€‰æ‹©åŸå¸‚");
 							select(city_spinner, city_adapter, city[provinceId]);
 							city_spinner
 									.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -380,7 +381,7 @@ public class AddAddressActivity extends SwipeBackActivity {
 											if (true) {
 												county_spinner = (Spinner) findViewById(R.id.county_spinner);
 												county_spinner
-														.setPrompt("ÇëÑ¡ÔñÏØÇø");
+														.setPrompt("è¯·é€‰æ‹©å¿åŒº");
 												switch (provinceId) {
 												case 0:
 													select(county_spinner,
